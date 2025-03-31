@@ -8,30 +8,35 @@ declare module "goodservice" {
     /**
      * @param message (string)
      */
+    constructor(route: string);
     getHeaders: (isFormadata: boolean) => Object;
     GET: <T>(
       endpoint: string,
       body?: object | FormData,
       customHeaders?: ApiHeaders,
-      isFormadata?: boolean
+      isFormadata?: boolean,
+      token?: boolean
     ) => Promise<{ status: number; data: T }>;
     POST: <T>(
       endpoint: string,
       body?: object | FormData,
       customHeaders?: ApiHeaders,
-      isFormadata?: boolean
+      isFormadata?: boolean,
+      token?: boolean
     ) => Promise<{ status: number; data: T }>;
     PUT: <T>(
       endpoint: string,
       body?: object | FormData,
       customHeaders?: ApiHeaders,
-      isFormadata?: boolean
+      isFormadata?: boolean,
+      token?: boolean
     ) => Promise<{ status: number; data: T }>;
     DELETE: <T>(
       endpoint: string,
       body?: object | FormData,
       customHeaders?: ApiHeaders,
-      isFormadata?: boolean
+      isFormadata?: boolean,
+      token?: boolean
     ) => Promise<{ status: number; data: T }>;
   }
   export const goodService: GoodService;

@@ -1,6 +1,6 @@
 {
   "name": "goodservice",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "good call api service",
   "main": "dist/dist-node/index.js",
   "module": "dist/dist-node/index.js",
